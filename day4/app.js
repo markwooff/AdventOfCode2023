@@ -3,6 +3,7 @@ var path = require('path');
 var input = fs.readFileSync(path.resolve(__dirname, "input.txt"), "utf-8");
 var inputArray = input.split("\n")
 
+// Part 1
 var sum = 0, copies = [], amountOfCards = 0;
 
 inputArray.forEach((line, lineNum) => {
@@ -34,5 +35,6 @@ inputArray.forEach((line, lineNum) => {
 
 console.log("Solution for Part 1 is: " + sum);
 
+// Part 2
 amountOfCards = copies.reduce((sum, value) => sum + value, 0);
 console.log("Solution for Part 2 is: " + amountOfCards);

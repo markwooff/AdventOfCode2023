@@ -6,6 +6,7 @@ file_path = os.path.join(current_directory, 'input.txt')
 with open(file_path, 'r') as file:
     inputArray = file.read().split("\n")
 
+## Part 1
 box = list(itertools.product((-1, 0, 1), (-1, 0, 1)))
 parts_by_symbol = {
     (i, j): (x, [])
@@ -29,7 +30,6 @@ for i, l in enumerate(inputArray):
         for symbol in parts_by_symbol.keys() & boundary:
             parts_by_symbol[symbol][1].append(n)
 
-## Part 1
 print("Solution for Part 1 is: %s" % part_sum)
 
 ## Part 2
